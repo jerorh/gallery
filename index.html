@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hannah Jeror</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css?family=David+Libre" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="bxslider/bxslider.css" />
+    <!-- Loads jQuery library via CDN -->
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <!-- Calls bxSlider Javascript file -->
+    <script src="bxslider/bxslider.min.js"></script>
+    <!-- Calls bxSlider Function -->
+    <script src="bxslider/slider.js"></script>
+  </head>
+  <body>
+    <main>
+      <nav id="main-navigation" class="navigation">
+  			 <a href="#"><span class="x-mark">&#10006;</span></a>
+  			 <h3>Navigation</h3>
+  			 <ul class="">
+  				 <li><a href="#">Instagram</a></li>
+  				 <li><a href="#">Twitter</a></li>
+  				 <li><a href="#">LinkedIn</a></li>
+  			 </ul>
+  		</nav>
+      <div class="teaser">
+        <h2>Hannah's Photos</h2>
+        <p>Some of my favorite pictures I've taken. Lots of beaches, sunsets, trees, and skies.</p>
+      </div>
+  		<div class="icon-wrap">
+  			<a href="#main-navigation"><span class="hamburger">&#9776;</span></a>
+  		</div>
+      <div id="slider">
+        <ul class="bxslider">
+          <li><img src="pix/beachsunset.jpg" title="The sunset from a beach in Greece." alt="beach sunset" /></li>
+          <li><img src="pix/stormy.jpg" title="The Racquette river before a storm this summer." alt="river" /></li>
+          <li><img src="pix/tree.jpg" title="A detailed shot of the tree in my backyard." alt="tree" /> </li>
+          <li><img src="pix/leaves.jpg" title="Peak foliage from last fall." alt="foliage" /></li>
+        </ul>
+      </div>
+      <section class="grid">
+  				<div id="whitesmoke" class="panel">
+  					<img src="pix/athens.jpg" alt="pines" onclick="onClick(this)" />
+  					<p>Athens, Greece from the top of the Acropolis.</p>
+  				</div>
+  				<div id="thistle" class="panel">
+  					<img src="pix/snow.jpg" alt="dry" onclick="onClick(this)" />
+  					<p>Ice and snow covered trees during winter.</p>
+  				</div>
+  				<div id="seashell" class="panel">
+  					<img src="pix/flower.jpg" alt="rapids" onclick="onClick(this)" />
+  					<p>A yellow flower.</p>
+  				</div>
+  				<div id="papayawhip" class="panel">
+  					<img src="pix/rocky.jpg" alt="outcrop" onclick="onClick(this)" />
+  					<p>The Racquette River from Lehman Park.</p>
+  				</div>
+  				<div id="mintcream" class="panel">
+  					<img src="pix/ives.jpg" alt="lake" onclick="onClick(this)" />
+  					<p>A sunset from Ives Park this summer.</p>
+  				</div>
+  				<div id="lightsteelblue" class="panel">
+  					<img src="pix/ferry.jpg" alt="sunset" onclick="onClick(this)" />
+  					<p>A picture from a ferry in Greece.</p>
+  				</div>
+  				<div id="lavender" class="panel">
+  					<img src="pix/backyard.jpg" alt="snails" onclick="onClick(this)" />
+  					<p>A tree in my backyard over the river.</p>
+  				</div>
+  				<div id="lightcyan" class="panel">
+  					<img src="pix/clouds.jpg" alt="river" onclick="onClick(this)" />
+  					<p>Cloudy blue sky.</p>
+  				</div>
+  				<div id="gainsboro" class="panel">
+  					<img src="pix/bridge.jpg" alt="rocks" onclick="onClick(this)" />
+  					<p>Sunset over the bridge in downtown Potsdam.</p>
+  				</div>
+  				<div id="azure" class="panel">
+  					<img src="pix/beach.jpg" alt="boats" onclick="onClick(this)" />
+  					<p>The start of a sunset on the beach in Greece.</p>
+  				</div>
+  				<div id="aliceblue" class="panel">
+  					<img src="pix/stillriver.jpg" alt="wet" onclick="onClick(this)" />
+  					<p>The river from my backyard.</p>
+  				</div>
+  				<div id="silver" class="panel">
+  					<img src="pix/trees.jpg" alt="gulls" onclick="onClick(this)" />
+  					<p>Sun shining through trees in the Adirondacks.</p>
+  				</div>
+          <div id="modal01" class="modal" onclick="this.style.display='none'">
+            <span class="closebtn container">&times;</span>
+            <div class="modal-content animate-zoom">
+              <img id="img01" style="width:200%">
+            </div>
+          </div>
+        </section>
+      </main>
+    </body>
+  <footer>
+    <p>&copy; Hannah Jeror, 2016</p>
+  </footer>
+    <script><!-- brings up the image modal -->
+			function onClick(element) {
+			  document.getElementById("img01").src = element.src;
+			  document.getElementById("modal01").style.display = "block";
+			}
+    </script>
+</html>
